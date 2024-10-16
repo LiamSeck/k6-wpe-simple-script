@@ -8,10 +8,10 @@ export const options = {
 cloud: {
       // The ID of the project to which the test is assigned in the k6 Cloud UI.
       // By default tests are executed in default project.
-      projectID: "",
+      projectID: "3719588",
       // The name of the test in the k6 Cloud UI.
       // Test runs with the same name will be grouped.
-      name: "",
+      name: "SE K6 Testing",
       distribution: {
         AWS_London: { loadZone: 'amazon:gb:london', percent: 100 }
       }
@@ -28,7 +28,7 @@ cloud: {
       executor: 'constant-vus',
       gracefulStop: '30s',
       duration: '1m',
-      vus: 20,
+      vus: 1,
       exec: 'GetHomepage',
     },
   },
@@ -38,8 +38,8 @@ export function GetHomepage() {
   let response
 
   group(`page_1 - ${base_url}`, function () {
-    // Viable ${base_url} has been set in config.js and imported
-    // This viable can be modied from by passing the -e HOSTNAME flag at run time e.g k6 run -e HOSTNAME=domain.com simple-script.js
+    // The ${base_url} variable has been set in config.js and imported
+    // This variable can be modified at run time by passing the -e HOSTNAME flag e.g k6 run -e HOSTNAME=domain.com simple-script.js
     response = http.get(`https://${base_url}/`,
     {
       headers: {
