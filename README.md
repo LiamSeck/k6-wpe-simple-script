@@ -1,3 +1,2 @@
-Run `k6 run -e HOSTNAME=domain.com simple-script.js` from local 
+Run `k6 run simple-script.js` from local machine or `k6 cloud run simple-script.js` to execute the test using K6 Cloud
 
-Or run `k6 cloud run -e HOSTNAME=domain.com simple-script.js` to execute the test using K6 Cloud
