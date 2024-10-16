@@ -38,6 +38,8 @@ export function GetHomepage() {
   let response
 
   group(`page_1 - ${base_url}`, function () {
+    // Viable ${base_url} has been set in config.js and imported
+    // This viable can be modied from by passing the -e HOSTNAME flag at run time e.g k6 run -e HOSTNAME=domain.com simple-script.js
     response = http.get(`https://${base_url}/`,
     {
       headers: {
