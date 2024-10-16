@@ -12,6 +12,7 @@ cloud: {
       // The name of the test in the k6 Cloud UI.
       // Test runs with the same name will be grouped.
       name: "SE K6 Testing",
+      // Define loadZone distribution 
       distribution: {
         AWS_London: { loadZone: 'amazon:gb:london', percent: 100 }
       }
