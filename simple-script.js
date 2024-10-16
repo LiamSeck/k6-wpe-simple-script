@@ -51,7 +51,7 @@ export function GetHomepage() {
       },
     })
   })
-  // Adding check for 220 response code
+  // Adding check for 200 response code
   check(response, {
     'is status 200': (r) => r.status === 200,
   });
