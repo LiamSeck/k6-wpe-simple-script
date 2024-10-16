@@ -1,1 +1,2 @@
+// The base_url variable can be modified at run time by passing the -e HOSTNAME flag e.g k6 run -e HOSTNAME=domain.com simple-script.js
 export const base_url = __ENV.HOSTNAME || 'liamseprod.wpenginepowered.com';
