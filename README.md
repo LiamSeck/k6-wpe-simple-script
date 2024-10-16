@@ -6,5 +6,5 @@
 
 - To execute the script using K6 Cloud first run authenticate with K6 Cloud by running `k6 login cloud --token token_ID` then to execute the script run `k6 cloud run simple-script.js`.
 
-- To define the hostname at run time add the `-e HOSTNAME=domain.com` flag: `k6 run -e HOSTNAME=domain.com simple-script.js` or `k6 cloud run -e HOSTNAME=domain.com simple-script.js`
+- To define the hostname at run time add the `-e HOSTNAME=domain.com` flag: `k6 run -e HOSTNAME=domain.com simple-script.js` or `k6 cloud run -e HOSTNAME=domain.com simple-script.js`.
 
