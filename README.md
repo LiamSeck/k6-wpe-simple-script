@@ -1,6 +1,6 @@
 # Execution Steps
 
-- On MacOS install K6 by running `brew install k6` or by following the K6 Docs: https://grafana.com/docs/k6/latest/set-up/install-k6/ 
+- On MacOS install K6 by running `brew install k6` or by following the [K6 Docs](https://grafana.com/docs/k6/latest/set-up/install-k6/).  
 
 - To execute the script using your local machines resources run `k6 run simple-script.js`. 
 
