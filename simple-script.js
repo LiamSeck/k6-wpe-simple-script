@@ -2,6 +2,8 @@ import { base_url } from "./config.js";
 import { sleep, group } from 'k6'
 import { check } from 'k6';
 import http from 'k6/http'
+import { getCurrentStageIndex } from 'https://jslib.k6.io/k6-utils/1.3.0/index.js';
+
 
 export const options = {
 
@@ -26,10 +28,22 @@ cloud: {
   
     scenarios: {
     GetHomepage: {
+      // Constant VUs
       executor: 'constant-vus',
       gracefulStop: '30s',
       duration: '1m',
       vus: 1,
+
+      //Ramping VUs
+      // executor: 'ramping-vus',
+      // startVUs: 0,
+      // stages: [
+      //   { target: 100, duration: '30s' },
+      //   { target: 100, duration: '1m' },
+      //   { target: 200, duration: '30s' },
+      //   { target: 200, duration: '1m' },
+      // ],      
+      // gracefulStop: '30s',
       exec: 'GetHomepage',
     },
   },
